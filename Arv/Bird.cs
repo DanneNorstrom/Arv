@@ -12,13 +12,19 @@ namespace Arv
 
         //F: svar lägg till det framtida attributet som alla fåglar har här
 
-        public Bird(string n, double w, int a) : base(n, w, a)
+        public Bird(string n, double w, int a, double wspan) : base(n, w, a)
         {
+            WingSpan = wspan;
         }
 
         public override void DoSound()
         {
             Console.WriteLine("Kvitter!");
+        }
+
+        public override string Stats()
+        {
+            return name +" " + weight +" " + age.ToString() +" " + WingSpan.ToString();
         }
     }
 }

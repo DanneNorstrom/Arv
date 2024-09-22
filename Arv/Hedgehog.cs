@@ -10,13 +10,18 @@ namespace Arv
     {
         protected int NrOfSpikes = 0;
 
-        public Hedgehog(string n, double w, int a) : base(n, w, a)
+        public Hedgehog(string n, double w, int a, int nr) : base(n, w, a)
         {
+            NrOfSpikes = nr;
         }
 
         public override void DoSound()
         {
             Console.WriteLine("Ljudet av en igelkott!");
+        }
+        public override string Stats()
+        {
+            return name + " " + weight + " " + age.ToString() + " " + NrOfSpikes.ToString();
         }
     }
 }

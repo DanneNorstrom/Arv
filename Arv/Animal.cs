@@ -21,5 +21,6 @@ namespace Arv
             age = a;    
         }
         public abstract void DoSound();
+        public abstract string Stats();
     }
 }
